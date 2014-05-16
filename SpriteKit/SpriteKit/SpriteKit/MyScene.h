@@ -12,7 +12,7 @@
     
     //answer if character is damaged or not
     bool isDamaged;
-    
+    bool isGrounded;
     //setting up int for speed
     int speed;
     

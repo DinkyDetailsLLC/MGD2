@@ -15,11 +15,13 @@
 AVAudioPlayer *_backgroundAudioPlayer;
 
 -(id)initWithSize:(CGSize)size {
+    
       [self startBackgroundMusic];
     if (self = [super initWithSize:size]) {
         /* define variables */
         
         isDamaged = NO; //by default damage is no
+        isGrounded = NO;
         speed = 10;
         
         /* Setup your scene here */
@@ -27,6 +29,7 @@ AVAudioPlayer *_backgroundAudioPlayer;
         //Adding Landscape -- Background Image
         SKSpriteNode *landscape = [SKSpriteNode spriteNodeWithImageNamed:@"landscape"];
         //Sets the image to absolute center
+        
         landscape.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
         //Scaling down the image
         landscape.xScale= .5;
@@ -35,6 +38,9 @@ AVAudioPlayer *_backgroundAudioPlayer;
         
         //Creating a function to add a Node/Character
         [self addChild: [self createCharacter] ];
+        
+        //Creating a function to add a Node/Character
+         [self performSelector:@selector(createGround) withObject:nil ];
         
         //Setting up action code
         [self setUpActions];
@@ -56,6 +62,7 @@ AVAudioPlayer *_backgroundAudioPlayer;
     }
     return self;
 }
+
 
 //Function to call the Character Node
 -(SKSpriteNode*) createCharacter{
@@ -105,20 +112,40 @@ AVAudioPlayer *_backgroundAudioPlayer;
     jumpAnimation = [SKAction sequence:@[atlasAnimation, wait, atlasAnimation2,resetTexture]];
   
     //Creating a second set of actions
-    SKAction* moveUp = [SKAction moveByX:0 y:150 duration:0.3];
-    SKAction* moveUp2 = [SKAction moveByX:0 y:40 duration:0.3];
-    SKAction* moveDown = [SKAction moveByX:0 y:-190 duration:0.4];
+    SKAction* moveUp = [SKAction moveByX:5 y:150 duration:0.3];
+    SKAction* moveUp2 = [SKAction moveByX:10 y:40 duration:0.3];
+    SKAction* moveDown = [SKAction moveByX:-5 y:-190 duration:0.4];
     SKAction* done = [SKAction performSelector:@selector(jumpDone) onTarget:self];
     
     jumpMovement =[SKAction sequence:@[moveUp, moveUp2, moveDown,done]];
 
 }
 
+//Collision on Ground
 -(void) jumpDone{
    //Check to see if jumping is occuring
     isJumping = NO;
     
-    NSLog(@"Jump Done");
+    //Play sound when he is hit
+    [self runAction:[SKAction playSoundFileNamed:@"thump.mp3" waitForCompletion:NO]];
+    
+    NSLog(@"Character hit ground -- Jump Done");
+    
+}
+
+//Set up the ground so we can test collisions when ground is hit
+-(void) createGround{
+    
+    CGPoint startPoint = CGPointMake(0,50);
+
+    //Adding Landscape -- Background Image
+    SKSpriteNode *ground = [SKSpriteNode spriteNodeWithImageNamed:@"ground"];
+    //Sets the image to absolute center
+    ground.position = CGPointMake(startPoint.x, startPoint.y);
+    //Scaling down the image
+    ground.xScale= .5;
+    ground.yScale= .5;
+    [self addChild:ground];
     
 }
 
@@ -187,7 +214,7 @@ AVAudioPlayer *_backgroundAudioPlayer;
     //We may or may not use this.. so lets define it
     SKSpriteNode* character;
     
-    //making sure the node is not nol
+    //making sure the node is not nil
     if(someNode !=nil){
     //Testing for the node to make sure it is a sprite node so things can happen
     if( [someNode isKindOfClass:[SKSpriteNode class]]){
@@ -232,6 +259,8 @@ AVAudioPlayer *_backgroundAudioPlayer;
         
     }];
     
+
+    
     //handling the shadow positioning
     [self enumerateChildNodesWithName:@"shadow" usingBlock:^(SKNode *node, BOOL *stop) {
         
@@ -250,6 +279,11 @@ AVAudioPlayer *_backgroundAudioPlayer;
         
     }];
 }
+
+-(void) meetsGround: (SKSpriteNode*)ground{
+    isGrounded = YES;
+}
+
 
 //testing damage to the character
 -(void) doDamage: (SKSpriteNode*)character{

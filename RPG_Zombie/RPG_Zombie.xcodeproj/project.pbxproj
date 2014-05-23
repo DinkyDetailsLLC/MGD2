@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15C53B87192EFD3C0029DD21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C53B86192EFD3C0029DD21 /* Foundation.framework */; };
+		15C53B89192EFD3C0029DD21 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C53B88192EFD3C0029DD21 /* CoreGraphics.framework */; };
+		15C53B8B192EFD3C0029DD21 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C53B8A192EFD3C0029DD21 /* UIKit.framework */; };
+		15C53B8D192EFD3C0029DD21 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C53B8C192EFD3C0029DD21 /* SpriteKit.framework */; };
+		15C53B93192EFD3C0029DD21 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15C53B91192EFD3C0029DD21 /* InfoPlist.strings */; };
+		15C53B95192EFD3C0029DD21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C53B94192EFD3C0029DD21 /* main.m */; };
+		15C53B99192EFD3C0029DD21 /* zmbAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C53B98192EFD3C0029DD21 /* zmbAppDelegate.m */; };
+		15C53B9C192EFD3C0029DD21 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C53B9A192EFD3C0029DD21 /* Main_iPhone.storyboard */; };
+		15C53B9F192EFD3C0029DD21 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C53B9D192EFD3C0029DD21 /* Main_iPad.storyboard */; };
+		15C53BA2192EFD3C0029DD21 /* zmbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C53BA1192EFD3C0029DD21 /* zmbViewController.m */; };
+		15C53BA9192EFD3C0029DD21 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15C53BA8192EFD3C0029DD21 /* Images.xcassets */; };
+		15C53BB0192EFD3C0029DD21 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C53BAF192EFD3C0029DD21 /* XCTest.framework */; };
+		15C53BB1192EFD3C0029DD21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C53B86192EFD3C0029DD21 /* Foundation.framework */; };
+		15C53BB2192EFD3C0029DD21 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C53B8A192EFD3C0029DD21 /* UIKit.framework */; };
+		15C53BBA192EFD3C0029DD21 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15C53BB8192EFD3C0029DD21 /* InfoPlist.strings */; };
+		15C53BBC192EFD3C0029DD21 /* RPG_ZombieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C53BBB192EFD3C0029DD21 /* RPG_ZombieTests.m */; };
+		15C53BC7192EFDD20029DD21 /* zmbLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C53BC6192EFDD20029DD21 /* zmbLevel.m */; };
+		15C53BCA192EFEA40029DD21 /* zmbStartMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C53BC9192EFEA40029DD21 /* zmbStartMenu.m */; };
+		15C53BCD192EFF2D0029DD21 /* zmbCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C53BCC192EFF2D0029DD21 /* zmbCharacter.m */; };
+		15C53BD0192F00150029DD21 /* GameData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15C53BCF192F00150029DD21 /* GameData.plist */; };
+		15C53BD6192F03640029DD21 /* back.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 15C53BD1192F03640029DD21 /* back.atlas */; };
+		15C53BD7192F03650029DD21 /* blob.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 15C53BD2192F03640029DD21 /* blob.atlas */; };
+		15C53BD8192F03650029DD21 /* front.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 15C53BD3192F03640029DD21 /* front.atlas */; };
+		15C53BD9192F03650029DD21 /* side.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 15C53BD4192F03640029DD21 /* side.atlas */; };
+		15C53BDA192F03650029DD21 /* still.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 15C53BD5192F03640029DD21 /* still.atlas */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15C53BB3192EFD3C0029DD21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15C53B7B192EFD3C0029DD21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15C53B82192EFD3C0029DD21;
+			remoteInfo = RPG_Zombie;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		15C53B83192EFD3C0029DD21 /* RPG_Zombie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPG_Zombie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15C53B86192EFD3C0029DD21 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		15C53B88192EFD3C0029DD21 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		15C53B8A192EFD3C0029DD21 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		15C53B8C192EFD3C0029DD21 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		15C53B90192EFD3C0029DD21 /* RPG_Zombie-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RPG_Zombie-Info.plist"; sourceTree = "<group>"; };
+		15C53B92192EFD3C0029DD21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		15C53B94192EFD3C0029DD21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		15C53B96192EFD3C0029DD21 /* RPG_Zombie-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RPG_Zombie-Prefix.pch"; sourceTree = "<group>"; };
+		15C53B97192EFD3C0029DD21 /* zmbAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zmbAppDelegate.h; sourceTree = "<group>"; };
+		15C53B98192EFD3C0029DD21 /* zmbAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zmbAppDelegate.m; sourceTree = "<group>"; };
+		15C53B9B192EFD3C0029DD21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		15C53B9E192EFD3C0029DD21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		15C53BA0192EFD3C0029DD21 /* zmbViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zmbViewController.h; sourceTree = "<group>"; };
+		15C53BA1192EFD3C0029DD21 /* zmbViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zmbViewController.m; sourceTree = "<group>"; };
+		15C53BA8192EFD3C0029DD21 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		15C53BAE192EFD3C0029DD21 /* RPG_ZombieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPG_ZombieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15C53BAF192EFD3C0029DD21 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		15C53BB7192EFD3C0029DD21 /* RPG_ZombieTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RPG_ZombieTests-Info.plist"; sourceTree = "<group>"; };
+		15C53BB9192EFD3C0029DD21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		15C53BBB192EFD3C0029DD21 /* RPG_ZombieTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPG_ZombieTests.m; sourceTree = "<group>"; };
+		15C53BC5192EFDD20029DD21 /* zmbLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zmbLevel.h; sourceTree = "<group>"; };
+		15C53BC6192EFDD20029DD21 /* zmbLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zmbLevel.m; sourceTree = "<group>"; };
+		15C53BC8192EFEA40029DD21 /* zmbStartMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zmbStartMenu.h; sourceTree = "<group>"; };
+		15C53BC9192EFEA40029DD21 /* zmbStartMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zmbStartMenu.m; sourceTree = "<group>"; };
+		15C53BCB192EFF2D0029DD21 /* zmbCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zmbCharacter.h; sourceTree = "<group>"; };
+		15C53BCC192EFF2D0029DD21 /* zmbCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zmbCharacter.m; sourceTree = "<group>"; };
+		15C53BCE192EFF680029DD21 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		15C53BCF192F00150029DD21 /* GameData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GameData.plist; sourceTree = "<group>"; };
+		15C53BD1192F03640029DD21 /* back.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = back.atlas; path = RPG_Zombie/back.atlas; sourceTree = "<group>"; };
+		15C53BD2192F03640029DD21 /* blob.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = blob.atlas; path = RPG_Zombie/blob.atlas; sourceTree = "<group>"; };
+		15C53BD3192F03640029DD21 /* front.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = front.atlas; path = RPG_Zombie/front.atlas; sourceTree = "<group>"; };
+		15C53BD4192F03640029DD21 /* side.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = side.atlas; path = RPG_Zombie/side.atlas; sourceTree = "<group>"; };
+		15C53BD5192F03640029DD21 /* still.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = still.atlas; path = RPG_Zombie/still.atlas; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15C53B80192EFD3C0029DD21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15C53B89192EFD3C0029DD21 /* CoreGraphics.framework in Frameworks */,
+				15C53B8B192EFD3C0029DD21 /* UIKit.framework in Frameworks */,
+				15C53B8D192EFD3C0029DD21 /* SpriteKit.framework in Frameworks */,
+				15C53B87192EFD3C0029DD21 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15C53BAB192EFD3C0029DD21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15C53BB0192EFD3C0029DD21 /* XCTest.framework in Frameworks */,
+				15C53BB2192EFD3C0029DD21 /* UIKit.framework in Frameworks */,
+				15C53BB1192EFD3C0029DD21 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15C53B7A192EFD3C0029DD21 = {
+			isa = PBXGroup;
+			children = (
+				15C53BD1192F03640029DD21 /* back.atlas */,
+				15C53BD2192F03640029DD21 /* blob.atlas */,
+				15C53BD3192F03640029DD21 /* front.atlas */,
+				15C53BD4192F03640029DD21 /* side.atlas */,
+				15C53BD5192F03640029DD21 /* still.atlas */,
+				15C53B8E192EFD3C0029DD21 /* RPG_Zombie */,
+				15C53BB5192EFD3C0029DD21 /* RPG_ZombieTests */,
+				15C53B85192EFD3C0029DD21 /* Frameworks */,
+				15C53B84192EFD3C0029DD21 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		15C53B84192EFD3C0029DD21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15C53B83192EFD3C0029DD21 /* RPG_Zombie.app */,
+				15C53BAE192EFD3C0029DD21 /* RPG_ZombieTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15C53B85192EFD3C0029DD21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15C53B86192EFD3C0029DD21 /* Foundation.framework */,
+				15C53B88192EFD3C0029DD21 /* CoreGraphics.framework */,
+				15C53B8A192EFD3C0029DD21 /* UIKit.framework */,
+				15C53B8C192EFD3C0029DD21 /* SpriteKit.framework */,
+				15C53BAF192EFD3C0029DD21 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		15C53B8E192EFD3C0029DD21 /* RPG_Zombie */ = {
+			isa = PBXGroup;
+			children = (
+				15C53B97192EFD3C0029DD21 /* zmbAppDelegate.h */,
+				15C53B98192EFD3C0029DD21 /* zmbAppDelegate.m */,
+				15C53B9A192EFD3C0029DD21 /* Main_iPhone.storyboard */,
+				15C53B9D192EFD3C0029DD21 /* Main_iPad.storyboard */,
+				15C53BA0192EFD3C0029DD21 /* zmbViewController.h */,
+				15C53BA1192EFD3C0029DD21 /* zmbViewController.m */,
+				15C53BC5192EFDD20029DD21 /* zmbLevel.h */,
+				15C53BC6192EFDD20029DD21 /* zmbLevel.m */,
+				15C53BC8192EFEA40029DD21 /* zmbStartMenu.h */,
+				15C53BC9192EFEA40029DD21 /* zmbStartMenu.m */,
+				15C53BCB192EFF2D0029DD21 /* zmbCharacter.h */,
+				15C53BCC192EFF2D0029DD21 /* zmbCharacter.m */,
+				15C53BCE192EFF680029DD21 /* constants.h */,
+				15C53BCF192F00150029DD21 /* GameData.plist */,
+				15C53BA8192EFD3C0029DD21 /* Images.xcassets */,
+				15C53B8F192EFD3C0029DD21 /* Supporting Files */,
+			);
+			path = RPG_Zombie;
+			sourceTree = "<group>";
+		};
+		15C53B8F192EFD3C0029DD21 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				15C53B90192EFD3C0029DD21 /* RPG_Zombie-Info.plist */,
+				15C53B91192EFD3C0029DD21 /* InfoPlist.strings */,
+				15C53B94192EFD3C0029DD21 /* main.m */,
+				15C53B96192EFD3C0029DD21 /* RPG_Zombie-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		15C53BB5192EFD3C0029DD21 /* RPG_ZombieTests */ = {
+			isa = PBXGroup;
+			children = (
+				15C53BBB192EFD3C0029DD21 /* RPG_ZombieTests.m */,
+				15C53BB6192EFD3C0029DD21 /* Supporting Files */,
+			);
+			path = RPG_ZombieTests;
+			sourceTree = "<group>";
+		};
+		15C53BB6192EFD3C0029DD21 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				15C53BB7192EFD3C0029DD21 /* RPG_ZombieTests-Info.plist */,
+				15C53BB8192EFD3C0029DD21 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15C53B82192EFD3C0029DD21 /* RPG_Zombie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15C53BBF192EFD3C0029DD21 /* Build configuration list for PBXNativeTarget "RPG_Zombie" */;
+			buildPhases = (
+				15C53B7F192EFD3C0029DD21 /* Sources */,
+				15C53B80192EFD3C0029DD21 /* Frameworks */,
+				15C53B81192EFD3C0029DD21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RPG_Zombie;
+			productName = RPG_Zombie;
+			productReference = 15C53B83192EFD3C0029DD21 /* RPG_Zombie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		15C53BAD192EFD3C0029DD21 /* RPG_ZombieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15C53BC2192EFD3C0029DD21 /* Build configuration list for PBXNativeTarget "RPG_ZombieTests" */;
+			buildPhases = (
+				15C53BAA192EFD3C0029DD21 /* Sources */,
+				15C53BAB192EFD3C0029DD21 /* Frameworks */,
+				15C53BAC192EFD3C0029DD21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15C53BB4192EFD3C0029DD21 /* PBXTargetDependency */,
+			);
+			name = RPG_ZombieTests;
+			productName = RPG_ZombieTests;
+			productReference = 15C53BAE192EFD3C0029DD21 /* RPG_ZombieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15C53B7B192EFD3C0029DD21 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = zmb;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Dinky_Details;
+				TargetAttributes = {
+					15C53BAD192EFD3C0029DD21 = {
+						TestTargetID = 15C53B82192EFD3C0029DD21;
+					};
+				};
+			};
+			buildConfigurationList = 15C53B7E192EFD3C0029DD21 /* Build configuration list for PBXProject "RPG_Zombie" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 15C53B7A192EFD3C0029DD21;
+			productRefGroup = 15C53B84192EFD3C0029DD21 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15C53B82192EFD3C0029DD21 /* RPG_Zombie */,
+				15C53BAD192EFD3C0029DD21 /* RPG_ZombieTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15C53B81192EFD3C0029DD21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15C53BD0192F00150029DD21 /* GameData.plist in Resources */,
+				15C53BA9192EFD3C0029DD21 /* Images.xcassets in Resources */,
+				15C53BD6192F03640029DD21 /* back.atlas in Resources */,
+				15C53B9F192EFD3C0029DD21 /* Main_iPad.storyboard in Resources */,
+				15C53BDA192F03650029DD21 /* still.atlas in Resources */,
+				15C53BD9192F03650029DD21 /* side.atlas in Resources */,
+				15C53B9C192EFD3C0029DD21 /* Main_iPhone.storyboard in Resources */,
+				15C53B93192EFD3C0029DD21 /* InfoPlist.strings in Resources */,
+				15C53BD7192F03650029DD21 /* blob.atlas in Resources */,
+				15C53BD8192F03650029DD21 /* front.atlas in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15C53BAC192EFD3C0029DD21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15C53BBA192EFD3C0029DD21 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15C53B7F192EFD3C0029DD21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15C53B99192EFD3C0029DD21 /* zmbAppDelegate.m in Sources */,
+				15C53BC7192EFDD20029DD21 /* zmbLevel.m in Sources */,
+				15C53BCA192EFEA40029DD21 /* zmbStartMenu.m in Sources */,
+				15C53BA2192EFD3C0029DD21 /* zmbViewController.m in Sources */,
+				15C53B95192EFD3C0029DD21 /* main.m in Sources */,
+				15C53BCD192EFF2D0029DD21 /* zmbCharacter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15C53BAA192EFD3C0029DD21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15C53BBC192EFD3C0029DD21 /* RPG_ZombieTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15C53BB4192EFD3C0029DD21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15C53B82192EFD3C0029DD21 /* RPG_Zombie */;
+			targetProxy = 15C53BB3192EFD3C0029DD21 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		15C53B91192EFD3C0029DD21 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15C53B92192EFD3C0029DD21 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		15C53B9A192EFD3C0029DD21 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15C53B9B192EFD3C0029DD21 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		15C53B9D192EFD3C0029DD21 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15C53B9E192EFD3C0029DD21 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		15C53BB8192EFD3C0029DD21 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15C53BB9192EFD3C0029DD21 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15C53BBD192EFD3C0029DD21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15C53BBE192EFD3C0029DD21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15C53BC0192EFD3C0029DD21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RPG_Zombie/RPG_Zombie-Prefix.pch";
+				INFOPLIST_FILE = "RPG_Zombie/RPG_Zombie-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		15C53BC1192EFD3C0029DD21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RPG_Zombie/RPG_Zombie-Prefix.pch";
+				INFOPLIST_FILE = "RPG_Zombie/RPG_Zombie-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		15C53BC3192EFD3C0029DD21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RPG_Zombie.app/RPG_Zombie";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RPG_Zombie/RPG_Zombie-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RPG_ZombieTests/RPG_ZombieTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		15C53BC4192EFD3C0029DD21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RPG_Zombie.app/RPG_Zombie";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RPG_Zombie/RPG_Zombie-Prefix.pch";
+				INFOPLIST_FILE = "RPG_ZombieTests/RPG_ZombieTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15C53B7E192EFD3C0029DD21 /* Build configuration list for PBXProject "RPG_Zombie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15C53BBD192EFD3C0029DD21 /* Debug */,
+				15C53BBE192EFD3C0029DD21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15C53BBF192EFD3C0029DD21 /* Build configuration list for PBXNativeTarget "RPG_Zombie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15C53BC0192EFD3C0029DD21 /* Debug */,
+				15C53BC1192EFD3C0029DD21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		15C53BC2192EFD3C0029DD21 /* Build configuration list for PBXNativeTarget "RPG_ZombieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15C53BC3192EFD3C0029DD21 /* Debug */,
+				15C53BC4192EFD3C0029DD21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15C53B7B192EFD3C0029DD21 /* Project object */;
+}

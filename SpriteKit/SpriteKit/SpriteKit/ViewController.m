@@ -11,7 +11,7 @@
 
 
 @implementation ViewController
-@synthesize paused;
+
 
 - (void)viewDidLoad
 {
@@ -39,15 +39,8 @@
     return YES;
 }
 
-
-
--(IBAction)goPauseButton {
-     SKView * skView = (SKView *)self.view;
-    if(!skView.paused){
-        SKView.paused = YES;
-    }else{
-        SKView.paused = NO;
-    }
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
 
 - (NSUInteger)supportedInterfaceOrientations
@@ -64,6 +57,8 @@
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
 }
+
+
 
 
 @end

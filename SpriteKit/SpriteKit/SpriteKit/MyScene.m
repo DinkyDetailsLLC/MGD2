@@ -12,6 +12,8 @@
 
 
 @implementation MyScene
+
+SKNode *_hudLayerNode;
 AVAudioPlayer *_backgroundAudioPlayer;
 
 
@@ -49,6 +51,8 @@ AVAudioPlayer *_backgroundAudioPlayer;
         //Delaying the function (same as above, just with a delay)
         [self performSelector:@selector(createBoulder) withObject:nil afterDelay:2.0];
         
+        [self setupSceneLayers];
+        [self setupUI];
         
         //Adding railing
         //SKSpriteNode *railing = [SKSpriteNode spriteNodeWithImageNamed:@"railing"];
@@ -64,6 +68,46 @@ AVAudioPlayer *_backgroundAudioPlayer;
     return self;
 }
 
+- (void)setupSceneLayers
+{
+    _hudLayerNode = [SKNode node];
+    [self addChild:_hudLayerNode];
+}
+
+- (void)setupUI
+{
+    int barHeight = 45;
+    CGSize backgroundSize =
+    CGSizeMake(self.size.width, barHeight);
+    SKColor *backgroundColor =
+    [SKColor colorWithRed:0 green:0 blue:0.05 alpha:1.0];
+    SKSpriteNode *hudBarBackground =
+    [SKSpriteNode spriteNodeWithColor:backgroundColor
+                                 size:backgroundSize];
+    hudBarBackground.position =
+    CGPointMake(0, self.size.height - barHeight);
+    hudBarBackground.anchorPoint = CGPointZero;
+    [_hudLayerNode addChild:hudBarBackground];
+    
+    
+    // 1
+    SKLabelNode *scoreLabel =
+    [SKLabelNode labelNodeWithFontNamed:@"Thirteen Pixel Fonts"];
+    // 2
+    scoreLabel.fontSize = 15.0;
+    scoreLabel.text = @"Score: 0";
+    scoreLabel.name = @"scoreLabel";
+    // 3
+    scoreLabel.verticalAlignmentMode =
+    SKLabelVerticalAlignmentModeCenter;
+    // 4
+    scoreLabel.position =
+    CGPointMake(self.size.width / 2,
+                self.size.height - scoreLabel.frame.size.height + 3);
+    // 5
+    [_hudLayerNode addChild:scoreLabel];
+    
+}
 
 //Function to call the Character Node
 -(SKSpriteNode*) createCharacter{

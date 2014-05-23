@@ -13,7 +13,7 @@
 
 @interface ViewController : UIViewController
 
-@property bool paused;
+
 
 
 @end

@@ -15,7 +15,7 @@
     bool isGrounded;
     //setting up int for speed
     int speed;
-    
+   
     SKAction *jumpMovement;
     bool isJumping;
     SKAction *jumpAnimation;

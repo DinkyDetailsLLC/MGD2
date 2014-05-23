@@ -9,9 +9,9 @@
 #import "ViewController.h"
 #import "MyScene.h"
 
+
 @implementation ViewController
-
-
+@synthesize paused;
 
 - (void)viewDidLoad
 {
@@ -21,6 +21,10 @@
     SKView * skView = (SKView *)self.view;
     skView.showsFPS = NO;
     skView.showsNodeCount = NO;
+
+    
+
+
     
     // Create and configure the scene.
     SKScene * scene = [MyScene sceneWithSize:skView.bounds.size];
@@ -33,6 +37,17 @@
 - (BOOL)shouldAutorotate
 {
     return YES;
+}
+
+
+
+-(IBAction)goPauseButton {
+     SKView * skView = (SKView *)self.view;
+    if(!skView.paused){
+        SKView.paused = YES;
+    }else{
+        SKView.paused = NO;
+    }
 }
 
 - (NSUInteger)supportedInterfaceOrientations
@@ -49,5 +64,6 @@
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
 }
+
 
 @end

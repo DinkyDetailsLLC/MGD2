@@ -14,6 +14,7 @@
 @implementation MyScene
 AVAudioPlayer *_backgroundAudioPlayer;
 
+
 -(id)initWithSize:(CGSize)size {
     
       [self startBackgroundMusic];
@@ -353,6 +354,9 @@ AVAudioPlayer *_backgroundAudioPlayer;
     [_backgroundAudioPlayer setVolume:.25];
     [_backgroundAudioPlayer play];
 }
+
+
+
 @end
 
 

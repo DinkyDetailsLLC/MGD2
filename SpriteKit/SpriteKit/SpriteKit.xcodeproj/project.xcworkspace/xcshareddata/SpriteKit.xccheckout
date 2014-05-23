@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>20A9293B-B64B-4CE4-89CB-420A62CD0ED8</string>
+	<string>4DD3DBC4-BA7B-4D8A-9A30-094FF02B3762</string>
 	<key>IDESourceControlProjectName</key>
 	<string>SpriteKit</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>0248BC28-2036-47E4-8D93-6477AD31B1D5</key>
-		<string>https://github.com/DinkyDetailsLLC/MGD.git</string>
+		<key>6AFFA1F4-4854-4E8F-A5E0-1BDB37D007A1</key>
+		<string>https://github.com/DinkyDetailsLLC/MGD2.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SpriteKit/SpriteKit.xcodeproj/project.xcworkspace</string>
+	<string>SpriteKit/SpriteKit/SpriteKit.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>0248BC28-2036-47E4-8D93-6477AD31B1D5</key>
-		<string>../../..</string>
+		<key>6AFFA1F4-4854-4E8F-A5E0-1BDB37D007A1</key>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/DinkyDetailsLLC/MGD.git</string>
+	<string>https://github.com/DinkyDetailsLLC/MGD2.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0248BC28-2036-47E4-8D93-6477AD31B1D5</string>
+	<string>6AFFA1F4-4854-4E8F-A5E0-1BDB37D007A1</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>0248BC28-2036-47E4-8D93-6477AD31B1D5</string>
+			<string>6AFFA1F4-4854-4E8F-A5E0-1BDB37D007A1</string>
 			<key>IDESourceControlWCCName</key>
-			<string>MGD</string>
+			<string>MGD2</string>
 		</dict>
 	</array>
 </dict>

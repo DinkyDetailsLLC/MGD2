@@ -27,6 +27,7 @@ AVAudioPlayer *_backgroundAudioPlayer;
         isGrounded = NO;
         speed = 10;
         
+        
         /* Setup your scene here */
         
         //Adding Landscape -- Background Image
@@ -61,8 +62,9 @@ AVAudioPlayer *_backgroundAudioPlayer;
         //railing.zPosition = 50;
         //[self addChild:railing];
         
-        
-        
+        [self addChild: [self pauseButton]];
+
+         [self addChild: [self playButton]];
        
     }
     return self;
@@ -230,8 +232,22 @@ AVAudioPlayer *_backgroundAudioPlayer;
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
+    UITouch *touch = [touches anyObject];
+    CGPoint location = [touch locationInNode:self];
+    SKNode *node = [self nodeAtPoint:location];
     
-    
+    //if pausebutton
+    if ([node.name isEqualToString:@"pauseButton"]) {
+        
+        self.scene.paused = YES;
+        
+    }
+    //if play
+    if ([node.name isEqualToString:@"playButton"]) {
+        
+        self.scene.paused = NO;
+        
+    }
     //Running the Jump Actions
     
     if (isJumping == NO){
@@ -243,10 +259,9 @@ AVAudioPlayer *_backgroundAudioPlayer;
     [character runAction:jumpAnimation];
     [character runAction:jumpMovement];
         
-    
+ 
     }
     
-   
     
 }
 
@@ -270,6 +285,8 @@ AVAudioPlayer *_backgroundAudioPlayer;
         //NSLog(@"Character is a SKSpriteNode");
         }
     }
+    
+    
     
     /* Called before each frame is rendered */
     
@@ -400,30 +417,41 @@ AVAudioPlayer *_backgroundAudioPlayer;
 }
 
 
+- (SKSpriteNode *)pauseButton
+{
+    SKSpriteNode *pauseNode = [SKSpriteNode spriteNodeWithImageNamed:@"centiApp.png"];
+    pauseNode.position = CGPointMake(300 ,520);
+    pauseNode.name = @"pauseButton";//how the node is identified later
+    
+    pauseNode.zPosition = 2.;
+
+    
+    
+    return pauseNode;
+}
+
+
+    - (SKSpriteNode *)playButton
+    {
+        SKSpriteNode *playNode = [SKSpriteNode spriteNodeWithImageNamed:@"play.png"];
+        playNode.position = CGPointMake(20 ,520);
+        playNode.name = @"playButton";//how the node is identified later
+        playNode.zPosition = 2.;
+        
+        return playNode;
+    }
+    
+
+
+
+
+
+
+
+
+
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

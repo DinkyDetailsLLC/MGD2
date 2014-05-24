@@ -22,6 +22,7 @@
     
     //checking how many times the man is hit    
     int hitCount;
+   ;
 }
 
 @end

@@ -23,7 +23,7 @@
     }return self;
 }
 
-//create backgeround
+//create background
 -(void) createBackground{
     SKTexture *bgTexture = [SKTexture textureWithImageNamed:@"mainBG"];
     self.background = [SKSpriteNode spriteNodeWithTexture:bgTexture];

@@ -30,6 +30,7 @@
 		15C53AF71925AB470029DD21 /* thump.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 15C53AF61925AB470029DD21 /* thump.mp3 */; };
 		15C53BE71936CE7A0029DD21 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C53BE61936CE7A0029DD21 /* MainScene.m */; };
 		15C53BEA1936D1920029DD21 /* CreditScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C53BE91936D1920029DD21 /* CreditScene.m */; };
+		15C53BED1936D46F0029DD21 /* HelpScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C53BEC1936D46F0029DD21 /* HelpScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		15C53BE61936CE7A0029DD21 /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScene.m; sourceTree = "<group>"; };
 		15C53BE81936D1920029DD21 /* CreditScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditScene.h; sourceTree = "<group>"; };
 		15C53BE91936D1920029DD21 /* CreditScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditScene.m; sourceTree = "<group>"; };
+		15C53BEB1936D46E0029DD21 /* HelpScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpScene.h; sourceTree = "<group>"; };
+		15C53BEC1936D46F0029DD21 /* HelpScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +153,8 @@
 				15C53BE61936CE7A0029DD21 /* MainScene.m */,
 				15C53BE81936D1920029DD21 /* CreditScene.h */,
 				15C53BE91936D1920029DD21 /* CreditScene.m */,
+				15C53BEB1936D46E0029DD21 /* HelpScene.h */,
+				15C53BEC1936D46F0029DD21 /* HelpScene.m */,
 				15A0B6B1191B0CDE005D3A77 /* MyScene.m */,
 				15C53AEF191C79880029DD21 /* GameOver.h */,
 				15C53AF0191C79880029DD21 /* GameOver.m */,
@@ -297,6 +302,7 @@
 				15C53BEA1936D1920029DD21 /* CreditScene.m in Sources */,
 				15A0B6AF191B0CDE005D3A77 /* ViewController.m in Sources */,
 				15A0B6A9191B0CDE005D3A77 /* AppDelegate.m in Sources */,
+				15C53BED1936D46F0029DD21 /* HelpScene.m in Sources */,
 				15A0B6A5191B0CDD005D3A77 /* main.m in Sources */,
 				15C53BE71936CE7A0029DD21 /* MainScene.m in Sources */,
 			);

@@ -28,6 +28,7 @@
 		15C53AF3191C7F380029DD21 /* TempleFight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 15C53AF2191C7F380029DD21 /* TempleFight.mp3 */; };
 		15C53AF5191C811D0029DD21 /* Training-Mixed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 15C53AF4191C811D0029DD21 /* Training-Mixed.mp3 */; };
 		15C53AF71925AB470029DD21 /* thump.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 15C53AF61925AB470029DD21 /* thump.mp3 */; };
+		15C53BE71936CE7A0029DD21 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C53BE61936CE7A0029DD21 /* MainScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		15C53AF2191C7F380029DD21 /* TempleFight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TempleFight.mp3; sourceTree = "<group>"; };
 		15C53AF4191C811D0029DD21 /* Training-Mixed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Training-Mixed.mp3"; sourceTree = "<group>"; };
 		15C53AF61925AB470029DD21 /* thump.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = thump.mp3; path = ../thump.mp3; sourceTree = "<group>"; };
+		15C53BE51936CE7A0029DD21 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
+		15C53BE61936CE7A0029DD21 /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,8 @@
 				15A0B6AD191B0CDE005D3A77 /* ViewController.h */,
 				15A0B6AE191B0CDE005D3A77 /* ViewController.m */,
 				15A0B6B0191B0CDE005D3A77 /* MyScene.h */,
+				15C53BE51936CE7A0029DD21 /* MainScene.h */,
+				15C53BE61936CE7A0029DD21 /* MainScene.m */,
 				15A0B6B1191B0CDE005D3A77 /* MyScene.m */,
 				15C53AEF191C79880029DD21 /* GameOver.h */,
 				15C53AF0191C79880029DD21 /* GameOver.m */,
@@ -287,6 +292,7 @@
 				15A0B6AF191B0CDE005D3A77 /* ViewController.m in Sources */,
 				15A0B6A9191B0CDE005D3A77 /* AppDelegate.m in Sources */,
 				15A0B6A5191B0CDD005D3A77 /* main.m in Sources */,
+				15C53BE71936CE7A0029DD21 /* MainScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

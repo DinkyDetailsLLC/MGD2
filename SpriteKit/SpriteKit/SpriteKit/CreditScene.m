@@ -24,7 +24,7 @@
 
 -(void) createBackground {
     
-    SKTexture * bgTexture = [SKTexture textureWithImageNamed:@"commonBG"];
+    SKTexture * bgTexture = [SKTexture textureWithImageNamed:@"creditsBG"];
     self.background = [SKSpriteNode spriteNodeWithTexture:bgTexture];
     self.background.position = (CGPoint){CGRectGetMidX(self.frame),CGRectGetMidY(self.frame)
     };

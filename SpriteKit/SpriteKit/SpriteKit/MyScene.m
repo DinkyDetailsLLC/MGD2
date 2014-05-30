@@ -180,8 +180,8 @@ AVAudioPlayer *_backgroundAudioPlayer;
     
     //Set the location to an actual position
     player.position =((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ?
-                      CGPointMake(160,150):
-                      CGPointMake(80, 75));
+                      CGPointMake(160,100):
+                      CGPointMake(80, 50));
     //Giving the Character a name
     player.name =@"character";
     
@@ -244,12 +244,12 @@ AVAudioPlayer *_backgroundAudioPlayer;
     //Sets the image to absolute center
     
     ground.position = ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ?
-                       CGPointMake(0, 45) : CGPointMake(0, 120));
+                       CGPointMake(0, 25) : CGPointMake(0, 25));
     //Scaling down the image
     
     [ground setScale: ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 1.0f : 0.5f)];
-    //    ground.xScale= .5;
-    //    ground.yScale= .5;
+        ground.xScale= .5;
+        ground.yScale= .5;
     [self addChild:ground];
     
 }
@@ -584,7 +584,7 @@ AVAudioPlayer *_backgroundAudioPlayer;
     score++;
     [scoreLabel setText:[NSString stringWithFormat:@"Score: %@", [NSNumber numberWithInteger:score]]];
     isScoreOn = NO;
-    if (score==20) {
+    if (score==8) {
         [self gameWon];
     }
 }

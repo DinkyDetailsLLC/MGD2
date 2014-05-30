@@ -8,46 +8,56 @@
 
 #import "GameOver.h"
 #import "MyScene.h"
+#import "MainScene.h"
 @import AVFoundation;
 
 @implementation GameOver
 AVAudioPlayer *_backgroundAudioPlayer;
 
 
--(id)initWithSize:(CGSize)size lose: (NSInteger)game{
+-(id)initWithSize:(CGSize)size lose: (NSInteger)score{
     [self startBackgroundMusic];
     if (self = [super initWithSize:size]) {
         
-      //  [self runAction:[SKAction playSoundFileNamed:@"TempleFight.mp3" waitForCompletion:YES]];
+        //  [self runAction:[SKAction playSoundFileNamed:@"TempleFight.mp3" waitForCompletion:YES]];
         
         self.backgroundColor = [SKColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
         
         
-        NSString * message;
-        message = @"Game Over";
+        // Game Over Label
+        SSBitmapFont *bitmapFont = [self bitmapFontForFile:@"ScorePanelFont"];
+        gameOverLabel = [bitmapFont nodeFromString:@"GAME OVER!"];
+        gameOverLabel.position = ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ?
+                                  CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)+200) :
+                                  CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)+100));
+        [self addChild:gameOverLabel];
         
+        // Show score
+        scoreLabel = [bitmapFont nodeFromString:[NSString stringWithFormat:@"Score: %d", score]];
+        scoreLabel.position = ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ?
+                               CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)+80) :
+                               CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)+40));
         
-        SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-        label.text = message;
-        label.fontSize = 40;
-        label.fontColor = [SKColor blackColor];
-        label.position = CGPointMake(self.size.width/2, self.size.height/2);
-        [self addChild:label];
+        ;
+        [self addChild:scoreLabel];
         
         
         //Add a Retry Button
-        NSString * retrymessage;
-        retrymessage = @"Replay Game";
-        SKLabelNode *retryButton = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-        retryButton.text = retrymessage;
-        retryButton.fontColor = [SKColor blackColor];
-        retryButton.position = CGPointMake(self.size.width/2, 100);
-        retryButton.name = @"retry";
-        [retryButton setScale:.5];
         
-        [self addChild:retryButton];
+        menu = [SKSpriteNode spriteNodeWithImageNamed:@"menu"];
+        menu.position = ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ?
+                         CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)-100) :
+                         CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)-40));
         
+        menu.zPosition = 0.3;
+        [self addChild:menu];
         
+        retry = [SKSpriteNode spriteNodeWithImageNamed:@"retry"];
+        retry.position = ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ?
+                          CGPointMake(CGRectGetMidX(self.frame), menu.position.y - (retry.size.height+40)) :
+                          CGPointMake(CGRectGetMidX(self.frame), menu.position.y - (retry.size.height+20)));
+        retry.zPosition = 0.3;
+        [self addChild:retry];
         
     }
     return self;
@@ -57,18 +67,37 @@ AVAudioPlayer *_backgroundAudioPlayer;
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [touches anyObject];
-    CGPoint location = [touch locationInNode:self];
-    SKNode *node = [self nodeAtPoint:location];
+    CGPoint positionInScene = [touch locationInNode:self];
     
-    if ([node.name isEqualToString:@"retry"]) {
-        SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
+    if (CGRectContainsPoint(retry.frame, positionInScene)) {
         
-        MyScene * scene = [MyScene sceneWithSize:self.view.bounds.size];
-        scene.scaleMode = SKSceneScaleModeAspectFill;
-        [self.view presentScene:scene transition: reveal];
+#ifdef DEBUG
+        NSLog(@"retry Button Tapped");
+#endif
         
+        // Set an action to the button
+        [retry runAction:[SKAction sequence:@[[SKAction moveByX:0 y:-2 duration:0.1f], [SKAction moveByX:0 y:2 duration:0.1]]]completion:^{
+            
+            SKTransition *reveal = [SKTransition fadeWithDuration:.5f];
+            MyScene *gameScene = [[MyScene alloc] initWithSize:self.size];
+            [self.scene.view presentScene:gameScene transition:reveal];
+            
+        }];
+    } else if (CGRectContainsPoint(menu.frame, positionInScene)) {
+        
+#ifdef DEBUG
+        NSLog(@"menu Button Tapped");
+#endif
+        
+        // Set an action to the button
+        [menu runAction:[SKAction sequence:@[[SKAction moveByX:0 y:-2 duration:0.1f], [SKAction moveByX:0 y:2 duration:0.1]]]completion:^{
+            
+            SKTransition *reveal = [SKTransition fadeWithDuration:.5f];
+            MainScene *mainScene = [[MainScene alloc] initWithSize:self.size];
+            [self.scene.view presentScene:mainScene transition:reveal];
+            
+        }];
     }
-    
 }
 
 - (void)startBackgroundMusic
@@ -88,6 +117,22 @@ AVAudioPlayer *_backgroundAudioPlayer;
     [_backgroundAudioPlayer play];
 }
 
+- (SSBitmapFont *)bitmapFontForFile:(NSString *)filename
+{
+    // Generate a path to the font file
+    NSString *path = [[NSBundle mainBundle] pathForResource:filename ofType:@"skf"];
+    
+    NSAssert(path, @"Could not find font file");
+    
+    // Create a new instance of SSBitmapFont using the font file and check for errors
+    NSError *error;
+    NSURL *url = [NSURL fileURLWithPath:path];
+    SSBitmapFont *bitmapFont = [[SSBitmapFont alloc] initWithFile:url error:&error];
+    
+    NSAssert(!error, @"%@: %@", error.domain, error.localizedDescription);
+    
+    return bitmapFont;
+}
 
 
 @end

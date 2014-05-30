@@ -8,9 +8,17 @@
 
 
 #import <SpriteKit/SpriteKit.h>
+#import "SSBitmapFont.h"
+#import "SSBitmapFontLabelNode.h"
 
-@interface GameOver : SKScene
+@interface GameOver : SKScene{
+    SSBitmapFontLabelNode * gameOverLabel;
+    SSBitmapFontLabelNode * scoreLabel;
+    
+    SKSpriteNode *menu;
+    SKSpriteNode *retry;
+}
 
--(id)initWithSize:(CGSize)size lose: (NSInteger)game_over;
+-(id)initWithSize:(CGSize)size lose: (NSInteger)score;
 
 @end

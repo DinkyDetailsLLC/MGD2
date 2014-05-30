@@ -10,4 +10,11 @@
 
 @interface MainScene : SKScene
 
+@property (nonatomic,retain) SKSpriteNode *background;
+@property (nonatomic,retain) SKSpriteNode *playButton;
+
+@property (nonatomic,retain) SKSpriteNode *helpButton;
+
+@property (nonatomic,retain) SKSpriteNode *creditsButton;
+
 @end

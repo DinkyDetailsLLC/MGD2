@@ -10,4 +10,8 @@
 
 @interface HelpScene : SKScene
 
+@property (nonatomic,retain) SKSpriteNode *background;
+
+@property (nonatomic,retain) SKSpriteNode * backButton;
+
 @end

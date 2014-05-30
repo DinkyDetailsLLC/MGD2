@@ -8,6 +8,14 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface CreditScene : SKScene
+@interface CreditsScene : SKScene
+
+@property (nonatomic,retain) SKSpriteNode *background;
+
+@property (nonatomic,retain) SKSpriteNode *backButton;
+
+@property (nonatomic,retain) SKLabelNode * title;
+
+@property (nonatomic,retain) SKLabelNode *credits;
 
 @end
